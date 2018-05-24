@@ -17,14 +17,14 @@ namespace HelloWorld2
             //string messageTwo = "I am Spartacus";
 
             //Part two set initial Spartacus attributes
-            //int ageOne = 35;
+            int ageOne = 35;
             //int ageTwo = 45;
             //int ageThree = 80;
             //double heightOne = 72.50;
             //double heightTwo = 91.45;
             //float weightOne = 210.0284606f;
             //float weightTwo = 331.12345678f;
-            //bool isGodLikeOne = true;
+            bool isGodLikeOne = true;
             //bool isGodLikeTwo = false;
             //char genderMale = 'M';
             //char genderFemale = 'F';
@@ -269,16 +269,48 @@ namespace HelloWorld2
             //{
             //    Console.WriteLine{ "Enter a value for" + foodList[i]);
             //foodAmount[i] = int.Parse(Console.ReadLine());
-        
-            for (int i = 0; i < foodAmount.Length; i++)
-            {
-                Console.WriteLine( "Enter a value for" + foodList[i]);
-                foodAmount[i] = int.Parse(Console.ReadLine());
-            }
 
+            // for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine( "Enter a value for" + foodList[i]);
+            //    foodAmount[i] = int.Parse(Console.ReadLine());
+            //}
 
+            isGodLikeOne = IsGodLike(ageOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
 
         }
+
+           static bool IsGodLike(int age)
+            {
+                bool status;
+                if (age % 2 == 0)
+                {
+                    status = false;
+                }
+                else
+                {
+                    status = true;
+                }
+                return status;
+
+        }
+    static string Reverse(string text)
+    {
+        char[] cArray = text.ToCharArray();
+        string reverse = " ";
+        for (int i = cArray.Length - 1; i > -1; i--)
+        {
+            reverse += cArray[i];
+        }
+        return reverse;
     }
-}
+
+
+    }// program class
+
+        
+}// name space class
+
+
 
